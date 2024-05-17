@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(./images/pattern-background-desktop.svg) var(--pale-blue);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card {
+  width: 420px;
+  height: 640px;
+  /* padding: 15px; */
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-bottom: 30px;
+}
+.summary {
+  font-weight: 900;
+  color: var(--dark-blue);
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+.parag {
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 24px;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+}
+.plan-card {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--very-pale-blue);
+  width: 85%;
+  padding: 20px 0px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+.plan-card .annual-plan h2 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.plan-card .annual-plan p {
+  color: var(--desaturated-blue);
+  margin-top: 5px;
+}
+.plan-card a {
+  color: var(--bright-blue);
+  font-weight: 900;
+  margin-left: 70px;
+}
+.plan-card a:active {
+  /* color: var(--desaturated-blue); */
+  opacity: 0.7;
+  text-decoration: none;
+}
+.payment-btn {
+  width: 85%;
+  text-align: center;
+  background-color: var(--bright-blue);
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.payment-btn:active {
+  /* background-color: var(--desaturated-blue); */
+  opacity: 0.7;
+}
+.cancel-btn {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--desaturated-blue);
+  padding: 10px 0px;
+  width: 85%;
+  text-align: center;
+  /* margin-bottom: 15px; */
+}
+.cancel-btn:active {
+  color: var(--dark-blue);
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Mobile */
+
+@media screen and (max-width: 450px) {
+  body {
+    background-size: auto;
+  }
+  .card {
+    width: 85%;
+  }
+  .summary {
+    margin-bottom: 20px !important;
+  }
+  .parag {
+    width: 73% !important;
+  }
+  .change-link {
+    margin-left: 30px !important;
+  }
+  .payment-btn {
+    width: 80% !important;
+  }
+  .cancel-btn {
+    width: 80% !important;
+  }
+}
